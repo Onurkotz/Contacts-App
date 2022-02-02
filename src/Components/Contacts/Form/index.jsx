@@ -9,7 +9,7 @@ function Form( {addContact, contacts} ) {
   
   useEffect( () => {setForm(initialForm);}, [contacts]);
 
-  const onChangeInput = (e) => { setForm({...form, [e.targe.name]: e.target.value})};
+  const onChangeInput = (e) => { setForm({...form, [e.target.name]: e.target.value})};
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -22,7 +22,8 @@ function Form( {addContact, contacts} ) {
     addContact([...contacts, form]);
   }
 
-  
+  //const delAdded = function delAdded(e) { e.preventDefault();  console.log(contacts.pop()); console.log(contacts) } For delete last item of contacts array.
+  //<button type='button' onClick={delAdded} > Delete Last Added</button> this must be in return.
 
 
   return (
@@ -35,6 +36,7 @@ function Form( {addContact, contacts} ) {
     </div>
     <div className='shape'>
       <button>Add</button>
+      
     </div>
     </form>
   )

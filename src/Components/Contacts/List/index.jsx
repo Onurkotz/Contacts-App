@@ -7,7 +7,7 @@ function List({contacts}) {
   const filtred = contacts.filter(
     (item) => {
       return Object.keys(item).some(
-        (key) => item[key].toString().toLowerCase().includes(filterText.toLowerCase())
+        (key) => item[key].toString().toLowerCase().includes(filterText.toLocaleLowerCase())
       )
     }
   )

@@ -1,5 +1,7 @@
 import { useState } from 'react'
 
+import style from "./style.module.css";
+
 function List({contacts}) {
 
   const [filterText, setFilterText] = useState("");
@@ -13,7 +15,7 @@ function List({contacts}) {
   )
   
   return (
-    <div>
+    <div className={style.firstHalf}>
       <input placeholder='Search someone' value={filterText} onChange= { (e) => setFilterText(e.target.value)}  />
 
       <ul>

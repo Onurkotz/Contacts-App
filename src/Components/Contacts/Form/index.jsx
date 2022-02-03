@@ -1,5 +1,7 @@
 import { useState, useEffect } from 'react';
 
+import style from "./style.module.css";
+
 const initialForm = { fullname: "", phone: ""}
 
 
@@ -27,7 +29,7 @@ function Form( {addContact, contacts} ) {
 
 
   return (
-    <form onSubmit={onSubmit}>
+    <form onSubmit={onSubmit} className={style.secondHalf}>
     <div>
       <input name="fullname" placeholder='Full Name' value={form.fullname} onChange={onChangeInput} />
     </div>

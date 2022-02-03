@@ -1,0 +1,11 @@
+.firstHalf {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    left: 0;
+    background-color: burlywood;
+    top: 10;
+    padding-top: 20px;
+    text-align-last: center;
+    padding-top: 170PX;
+}

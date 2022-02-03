@@ -24,9 +24,17 @@ function Contacts() {
   
   return (
     <div>
-      <h1>Contacts</h1>
-      <List contacts={contacts} />
-      <Form addContact={setContacts} contacts={contacts} />
+      <h1 style={{color:"blue", textAlign: "center",}}>My Contacts</h1>
+      <div className="row">
+        <div className="col-6">
+        <List contacts={contacts} />
+        </div>
+        <div className="col-6">
+        <Form addContact={setContacts} contacts={contacts} />
+        </div>
+      </div>
+      
+      
     </div>
   )
 }

@@ -31,13 +31,14 @@ function Form( {addContact, contacts} ) {
   return (
     <form onSubmit={onSubmit} className={style.secondHalf}>
     <div>
-      <input name="fullname" placeholder='Full Name' value={form.fullname} onChange={onChangeInput} />
+      <input className={style.put} name="fullname" placeholder='Full Name' value={form.fullname} onChange={onChangeInput} />
     </div>
     <div>
-      <input name="phone" placeholder='Phone Number' value={form.phone} onChange={onChangeInput} />
+      <input className={style.put} name="phone" placeholder='Phone Number' value={form.phone} onChange={onChangeInput} />
     </div>
-    <div className='shape'>
-      <button>Add</button>
+    <div>
+    
+      <button  className={style.glowonhover}>Add</button>
       
     </div>
     </form>

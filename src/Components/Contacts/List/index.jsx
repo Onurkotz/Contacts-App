@@ -18,7 +18,7 @@ function List({contacts}) {
     <div className={style.firstHalf}>
       <input placeholder='Search someone' value={filterText} onChange= { (e) => setFilterText(e.target.value)}  />
 
-      <ul>
+      <ul className={style.point}>
         
         {filtred.map( (contacts, i) => (
           <li key={i}>

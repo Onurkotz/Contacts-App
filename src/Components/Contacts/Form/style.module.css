@@ -3,11 +3,12 @@
     width: 50%;
     position: fixed;
     right: 0;
-    background-color: red;
+    background-color: rgb(252, 65, 96);
     top: 10;
     padding-top: 20px;
     text-align-last: center;
     padding-top: 170px;
+    border-left: 2px solid black;
   }
 
  

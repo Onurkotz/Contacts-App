@@ -3,9 +3,14 @@
     width: 50%;
     position: fixed;
     left: 0;
-    background-color: burlywood;
+    background-color: rgb(56, 85, 247);
     top: 10;
     padding-top: 20px;
     text-align-last: center;
     padding-top: 170PX;
+    border-right: 2px solid black;
+}
+
+.point {
+    list-style-type: none;
 }

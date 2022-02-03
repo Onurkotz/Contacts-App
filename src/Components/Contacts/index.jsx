@@ -3,6 +3,8 @@ import { useState, useEffect } from 'react'
 import Form from "./Form";
 import List from "./List/";
 
+import style from "./style.module.css";
+
 function Contacts() {
 
   const [contacts, setContacts] = useState([
@@ -24,7 +26,10 @@ function Contacts() {
   
   return (
     <div>
-      <h1 style={{color:"blue", textAlign: "center",}}>My Contacts</h1>
+      <div className={style.wall}>
+      <h1><span className={style.spn}>My Contacts</span></h1>
+      </div>
+      
       <div className="row">
         <div className="col-6">
         <List contacts={contacts} />

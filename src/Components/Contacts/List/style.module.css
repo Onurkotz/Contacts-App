@@ -13,4 +13,26 @@
 
 .point {
     list-style-type: none;
+    
+}
+
+/*.dec{
+    display: flex;
+    justify-content: space-evenly;
+    
+}*/
+.put {
+    border: none;
+    border-bottom: 2px solid red;
+    background-color: rgb(56, 85, 247);
+    text-align: center;
+}
+
+.put::placeholder {
+    color: seashell;
+    text-align: center;
+}
+
+.put:focus {
+    background-color: silver;
 }

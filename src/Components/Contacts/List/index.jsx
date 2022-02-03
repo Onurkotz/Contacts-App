@@ -16,18 +16,21 @@ function List({contacts}) {
   
   return (
     <div className={style.firstHalf}>
-      <input placeholder='Search someone' value={filterText} onChange= { (e) => setFilterText(e.target.value)}  />
+      <input className={style.put} placeholder='Search someone' value={filterText} onChange= { (e) => setFilterText(e.target.value)}  />
+      
 
-      <ul className={style.point}>
+      <ul className={style.point, "list-group", "list-group-flush"}>
         
         {filtred.map( (contacts, i) => (
-          <li key={i}>
+          <li key={i} className={style.dec, "list-group-item"} style={ {backgroundColor: "rgb(56, 85, 247)"} }>
             <span>{contacts.fullname}</span>
             <span>{contacts.phone}</span>
           </li>
         ))}
         
       </ul>
+
+    
 
       <p>Total Contacts: {filtred.length}</p>
     </div>

@@ -31,6 +31,7 @@ function List({contacts}) {
         
         {filtred.map( (contacts, i) => (  
           <li id='list' key={i} className={style.dec} style={ {backgroundColor: "rgb(56, 85, 247)"} }>
+            <a href='tel:{contacts.phone}'><i className="fas fa-phone"></i></a>
             <span>{contacts.fullname}</span>
             <span>{contacts.phone}</span>
             <button onClick={remove} className={style.close}>X</button>

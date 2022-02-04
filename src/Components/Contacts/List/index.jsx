@@ -13,6 +13,14 @@ function List({contacts}) {
       )
     }
   )
+
+ 
+  function remove(){
+    const list = document.querySelector('#list');
+    list.remove();
+  }
+  
+  
   
   return (
     <div className={style.firstHalf}>
@@ -21,10 +29,11 @@ function List({contacts}) {
 
       <ul className={style.point}>
         
-        {filtred.map( (contacts, i) => (
-          <li key={i} className={style.dec} style={ {backgroundColor: "rgb(56, 85, 247)"} }>
+        {filtred.map( (contacts, i) => (  
+          <li id='list' key={i} className={style.dec} style={ {backgroundColor: "rgb(56, 85, 247)"} }>
             <span>{contacts.fullname}</span>
             <span>{contacts.phone}</span>
+            <button onClick={remove} className={style.close}>X</button>
            
           </li>
         ))}

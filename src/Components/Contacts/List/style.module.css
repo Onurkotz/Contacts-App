@@ -67,14 +67,17 @@
 }
 
 .close {
-    cursor: pointer;
     position: absolute;
-    top: 50%;
-    right: 0%;
+    color: red;
+    margin-left: 500px;
+    border: none;
+    background: none;
     
-    transform: translate(0%, -50%);
-  }
-  
+}
+
 .close:hover {
-    background: #bbb;
+    width: 20px;
+    height: 25px;
+    background: rgba(255, 0, 0, 0.233);
+    border-radius: 50px;
 }

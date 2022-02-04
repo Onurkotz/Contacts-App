@@ -24,8 +24,6 @@ function Form( {addContact, contacts} ) {
     addContact([...contacts, form]);
   }
 
-  //const delAdded = function delAdded(e) { e.preventDefault();  console.log(contacts.pop()); console.log(contacts) } For delete last item of contacts array.
-  //<button type='button' onClick={delAdded} > Delete Last Added</button> this must be in return.
 
 
   return (

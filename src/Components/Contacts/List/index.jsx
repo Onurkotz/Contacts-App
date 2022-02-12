@@ -16,7 +16,7 @@ function List({contacts}) {
 
  
   function remove(){
-    const list = document.querySelector('#list');
+    const list = document.querySelector('li');
     list.remove();
 
      

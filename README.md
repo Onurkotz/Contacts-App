@@ -4,6 +4,14 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # My Contacts App With React
 
+
+## VİEWS
+
+
+<img src="/list.jpg" style="width: 200px; height: 100px">  <img src="/add.jpg" style="width: 200px; height: 100px">
+
+<img src="/view.jpg" style="width: 400px; height: 200px">
+
 ## WHAT PRESENTS TO YOU?
 
 - This is a simple contact app.
@@ -17,8 +25,4 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 - Uses CSS Animations.
 - Maybe it could contain some non-working and fail functions. But these are seen and work on. Because of this:
     - The app could develop.
-    - **This app is on delelopment phase.**
-
-
-
-
+    - **This app is on development phase.**

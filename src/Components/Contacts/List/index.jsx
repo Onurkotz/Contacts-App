@@ -18,6 +18,8 @@ function List({contacts}) {
   function remove(){
     const list = document.querySelector('#list');
     list.remove();
+
+     
   }
   
   
@@ -34,7 +36,7 @@ function List({contacts}) {
             <a href='tel:{contacts.phone}'><i className="fas fa-phone"></i></a>
             <span>{contacts.fullname}</span>
             <span>{contacts.phone}</span>
-            <button onClick={remove} className={style.close}>X</button>
+            <button id='closer' onClick={remove} className={style.close}>X</button>
            
           </li>
         ))}

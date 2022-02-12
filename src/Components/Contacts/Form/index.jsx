@@ -36,7 +36,7 @@ function Form( {addContact, contacts} ) {
     </div>
     <div>
     
-      <button  className={style.glowonhover}>Add</button>
+      <button className={style.glowonhover}>Add</button>
       
     </div>
     </form>

@@ -25,8 +25,13 @@ export const contactSlice = createSlice({
     addNew: (state, action) => {
       state.items.push(action.payload);
     },
+    destroy: (state, action) => {
+      const id = action.payload;
+      const filtered = state.items.filter((item) => item.id !== id);
+      state.items = filtered
+    },
   },
 });
 
-export const { addNew } = contactSlice.actions;
+export const { addNew, destroy } = contactSlice.actions;
 export default contactSlice.reducer;

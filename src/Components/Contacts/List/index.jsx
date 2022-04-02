@@ -1,37 +1,42 @@
-import { useState } from 'react'
+import React from "react";
+import { useSelector } from "react-redux";
 
 import style from "./style.module.css";
 
-function List({contacts}) {
-
-  const [filterText, setFilterText] = useState("");
-
-  const filtred = contacts.filter(
-    (item) => {
-      return Object.keys(item).some(
-        (key) => item[key].toString().toLowerCase().includes(filterText.toLocaleLowerCase())
-      )
-    }
-  )
-
- 
-  function remove(){
-    const list = document.querySelector('li');
-    list.remove();
-
-     
-  }
-  
-  
-  
+function List() {
   return (
     <div className={style.firstHalf}>
-      <input className={style.put} placeholder='Search someone' value={filterText} onChange= { (e) => setFilterText(e.target.value)}  />
-      
+      <input className={style.put} placeholder="Search someone" />
 
       <ul className={style.point}>
-        
-        {filtred.map( (contacts, i) => (  
+        <li
+          id="list"
+          className={style.dec}
+          style={{ backgroundColor: "rgb(56, 85, 247)" }}
+        >
+          <a href="tel:543">
+            <i className="fas fa-phone"></i>
+          </a>
+          <span>Onur Koç</span>
+          <span>5432985139</span>
+          <button id="closer" className={style.close}>
+            X
+          </button>
+        </li>
+      </ul>
+
+      <p>
+        <span className={style.total}>Total Contacts: 1</span>
+      </p>
+    </div>
+  );
+}
+
+export default List;
+
+/*   
+
+{filtred.map( (contacts, i) => (  
           <li id='list' key={i} className={style.dec} style={ {backgroundColor: "rgb(56, 85, 247)"} }>
             <a href='tel:{contacts.phone}'><i className="fas fa-phone"></i></a>
             <span>{contacts.fullname}</span>
@@ -40,14 +45,5 @@ function List({contacts}) {
            
           </li>
         ))}
-        
-      </ul>
 
-    
-
-      <p><span className={style.total}>Total Contacts: {filtred.length}</span></p>
-    </div>
-  )
-}
-
-export default List;
+*/

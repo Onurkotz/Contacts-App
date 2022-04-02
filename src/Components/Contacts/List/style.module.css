@@ -11,10 +11,6 @@
     border-right: 2px solid black;
 }
 
-/*.point {
-    list-style-type: none;
-    
-}*/
 
 .dec{
     color: honeydew;
@@ -69,7 +65,7 @@
 .close {
     position: absolute;
     color: red;
-    margin-left: 500px;
+    margin-left: 400px;
     border: none;
     background: none;
     

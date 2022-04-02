@@ -3,26 +3,32 @@ import { useSelector } from "react-redux";
 
 import style from "./style.module.css";
 
+const dataState = (state) => state.contact.items;
+
 function List() {
+  const dataVel = useSelector(dataState);
+  console.log(dataVel)
+
   return (
     <div className={style.firstHalf}>
       <input className={style.put} placeholder="Search someone" />
 
       <ul className={style.point}>
-        <li
-          id="list"
-          className={style.dec}
-          style={{ backgroundColor: "rgb(56, 85, 247)" }}
-        >
-          <a href="tel:543">
-            <i className="fas fa-phone"></i>
-          </a>
-          <span>Onur Koç</span>
-          <span>5432985139</span>
-          <button id="closer" className={style.close}>
-            X
-          </button>
-        </li>
+        {dataVel.map((item) => (
+          <li
+            key={item.id}
+            id="list"
+            className={style.dec}
+            style={{ backgroundColor: "rgb(56, 85, 247)" }}
+          >
+            <a href={item.tel}>
+              <i className="fas fa-phone"></i>
+            </a>
+            <span>{item.name}</span>
+            <span>{item.tel}</span>
+            <button className={style.close}>X</button>
+          </li>
+        ))}
       </ul>
 
       <p>

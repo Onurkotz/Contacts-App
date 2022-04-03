@@ -1,6 +1,5 @@
-import React from "react";
-import { useSelector } from "react-redux";
-import { useDispatch } from "react-redux";
+import { useState } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import style from "./style.module.css";
 import { destroy } from "../../../Redux/contactSlice/contactSlice";
 
@@ -8,23 +7,36 @@ const dataState = (state) => state.contact.items;
 
 function List() {
   const dataVel = useSelector(dataState);
-  console.log(dataVel);
 
-  const dispatch = useDispatch()
+  const [filteredList, setFilteredList] = useState("");
+  const filtered = dataVel.filter((item) => {
+    return Object.keys(item).some((key) =>
+      item[key]
+        .toString()
+        .toLowerCase()
+        .includes(filteredList.toLocaleLowerCase())
+    );
+  });
 
+  const dispatch = useDispatch();
 
   const handleDestroy = (id) => {
-    if(window.confirm("Emin misiniz?")){
-      dispatch(destroy(id))
+    if (window.confirm("Emin misiniz?")) {
+      dispatch(destroy(id));
     }
-  }
+  };
 
   return (
     <div className={style.firstHalf}>
-      <input className={style.put} placeholder="Search someone" />
+      <input
+        className={style.put}
+        placeholder="Search someone"
+        value={filteredList}
+        onChange={(e) => setFilteredList(e.target.value)}
+      />
 
       <ul className={style.point}>
-        {dataVel.map((item) => (
+        {filtered.map((item) => (
           <li
             key={item.id}
             id="list"
@@ -36,13 +48,18 @@ function List() {
             </a>
             <span>{item.name}</span>
             <span>{item.tel}</span>
-            <button className={style.close} onClick={() => handleDestroy(item.id)} >X</button>
+            <button
+              className={style.close}
+              onClick={() => handleDestroy(item.id)}
+            >
+              X
+            </button>
           </li>
         ))}
       </ul>
 
       <p>
-        <span className={style.total}>Total Contacts: 1</span>
+        <span className={style.total}>Total Contacts: {dataVel.length}</span>
       </p>
     </div>
   );

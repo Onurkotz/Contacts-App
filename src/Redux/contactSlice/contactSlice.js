@@ -20,6 +20,7 @@ export const contactSlice = createSlice({
         tel: 5986241527,
       },
     ],
+    filteredList: {},
   },
   reducers: {
     addNew: (state, action) => {
@@ -28,7 +29,7 @@ export const contactSlice = createSlice({
     destroy: (state, action) => {
       const id = action.payload;
       const filtered = state.items.filter((item) => item.id !== id);
-      state.items = filtered
+      state.items = filtered;
     },
   },
 });

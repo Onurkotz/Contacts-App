@@ -4,9 +4,9 @@
 ## VİEWS
 
 
-<img src="/list.jpg" style="width: 200px; height: 100px">  <img src="/add.jpg" style="width: 200px; height: 100px">
+<img src="./Screenshot/list.jpg" style="width: 200px; height: 100px">  <img src="./Screenshot/add.jpg" style="width: 200px; height: 100px">
 
-<img src="/view.jpg" style="width: 400px; height: 200px">
+<img src="./Screenshot/view.jpg" style="width: 400px; height: 200px">
 
 ## WHAT PRESENTS TO YOU?
 
